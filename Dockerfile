@@ -11,6 +11,9 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+ENV VERSES_API=http://localhost:8080
+ENV USERS_API=http://localhost:8081
+ENV JWT_SECRET=build-time-placeholder-secret-key-32chars
 RUN bun run build
 
 FROM base AS runner
