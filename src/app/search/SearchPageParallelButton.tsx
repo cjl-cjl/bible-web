@@ -43,8 +43,7 @@ function ParallelTranslationInfoIcon() {
           </Button>
         </TooltipTrigger>
         <TooltipContent className="max-w-sm whitespace-normal text-xs">
-          Verses with the query are fetched and the corresponding verses
-          according to the chapter and verse numbers are displayed.
+          根据搜索词获取经文，并按章节和经文编号显示对应的经文。
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
@@ -104,9 +103,9 @@ export default function SearchPageParallelButton({
 
       <DropdownMenuContent className="w-64 p-6 space-y-4">
         <div>
-          <p className="text-lg font-bold">Parallel Reading</p>
+          <p className="text-lg font-bold">平行阅读</p>
           <p className="mb-2 text-sm text-muted-foreground">
-            Select translations to view together <ParallelTranslationInfoIcon />
+            选择要一起查看的译本 <ParallelTranslationInfoIcon />
           </p>
         </div>
 
@@ -140,7 +139,7 @@ export default function SearchPageParallelButton({
           className="w-full hover:cursor-pointer"
           disabled={isPending}
         >
-          {isPending ? 'Fetching...' : 'Submit'}
+          {isPending ? '加载中...' : '提交'}
         </Button>
       </DropdownMenuContent>
     </DropdownMenu>

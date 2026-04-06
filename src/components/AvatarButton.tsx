@@ -42,13 +42,13 @@ export default function AvatarButton({
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuGroup>
           <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            Dark theme
+            深色主题
             <DropdownMenuShortcut>
               <ThemeToggleSwitch></ThemeToggleSwitch>
             </DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            Font size
+            字体大小
             <DropdownMenuShortcut>
               <FontSizeSwitcher fontSize={fontSize}></FontSizeSwitcher>
             </DropdownMenuShortcut>
@@ -57,12 +57,12 @@ export default function AvatarButton({
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuGroup>
           <DropdownMenuItem className="hover:cursor-pointer">
-            Profile
+            个人资料
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <Link passHref href="/settings">
             <DropdownMenuItem className="hover:cursor-pointer">
-              Settings
+              设置
               <DropdownMenuShortcut>⇧⌘S</DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
@@ -74,7 +74,7 @@ export default function AvatarButton({
                 type="submit"
                 className="hover:cursor-pointer h-full w-full"
               >
-                Logout
+                退出登录
               </button>
             </DropdownMenuItem>
           </Form>

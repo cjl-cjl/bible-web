@@ -15,7 +15,7 @@ const SignUpPage = async () => {
           fill={true}
           src="/placeholder1.jpg"
           className="w-full h-full object-cover"
-          alt="An image to fill the empty space"
+          alt="填充空白的图片"
         ></Image>
       </div>
       <div className="w-full md:w-2/3 flex items-center justify-center">

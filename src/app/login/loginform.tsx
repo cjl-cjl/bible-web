@@ -9,11 +9,11 @@ const LoginPage = () => {
   const pathname = useSearchParams().get('redirect') || '/';
   return (
     <div className="max-w-md w-full space-y-6 mx-8">
-      <h1 className="font-bold text-3xl text-left">Log in to your account</h1>
+      <h1 className="font-bold text-3xl text-left">登录您的账户</h1>
       <Form action={loginUser} className="space-y-4">
         <div className="flex flex-col">
           <label htmlFor="emailorusername" className="mb-1 font-medium">
-            Email or Username
+            邮箱或用户名
           </label>
           <input
             name="emailorusername"
@@ -25,7 +25,7 @@ const LoginPage = () => {
         </div>
         <div className="flex flex-col">
           <label htmlFor="password" className="mb-1 font-medium">
-            Password
+            密码
           </label>
           <input
             name="password"
@@ -43,7 +43,7 @@ const LoginPage = () => {
             className="h-4 w-4"
           />
           <label htmlFor="remember" className="text-sm">
-            Remember me
+            记住我
           </label>
         </div>
         <input type="hidden" name="redirect" value={pathname} />
@@ -51,21 +51,21 @@ const LoginPage = () => {
           type="submit"
           className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition hover:cursor-pointer"
         >
-          Login
+          登录
         </button>
       </Form>
       <p className="text-sm text-center">
-        Don’t have an account?{' '}
+        还没有账户？{' '}'}
         <Link
           href={`/signup?redirect=${encodeURIComponent(pathname)}`}
           className="text-blue-600 hover:underline"
         >
-          Click here to sign up
+          点击此处注册
         </Link>
       </p>
       <p className="text-sm text-center">
         <Link href={pathname} className="text-blue-600 hover:underline">
-          Go back
+          返回
         </Link>
       </p>
     </div>

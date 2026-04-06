@@ -40,7 +40,7 @@ export async function saveParallelTranslations({
   return {
     success: true,
     data: result,
-    message: 'Parallel translations saved successfully!',
+    message: '平行译本已成功保存！',
   };
 }
 
@@ -98,7 +98,7 @@ export async function serverSetFontSize(delta: number) {
       secure: true,
     });
   }
-  return { message: 'Success' };
+  return { message: '成功' };
 }
 
 export async function serverSetMarginSize(delta: number) {
@@ -120,7 +120,7 @@ export async function serverSetMarginSize(delta: number) {
       secure: true,
     });
   }
-  return { message: 'Success' };
+  return { message: '成功' };
 }
 
 export async function serverSetFontFamily(fontFamily: number) {
@@ -141,7 +141,7 @@ export async function serverSetFontFamily(fontFamily: number) {
       secure: true,
     });
   }
-  return { message: 'Success' };
+  return { message: '成功' };
 }
 
 export async function switchUseAbbreviationState(targetState: boolean) {

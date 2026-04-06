@@ -1,3 +1,3 @@
 export default function FAQPage() {
-  return <div>FAQ page</div>;
+  return <div>常见问题页面</div>;
 }

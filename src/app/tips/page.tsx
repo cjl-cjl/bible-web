@@ -1,3 +1,3 @@
 export default function TipsPage() {
-  return <div>Tips page</div>;
+  return <div>提示页面</div>;
 }

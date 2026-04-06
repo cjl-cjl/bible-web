@@ -24,8 +24,8 @@ export default async function ChapterPage({
   if (isNaN(chapterNumber)) {
     return (
       <div>
-        Chapter {chapter} is not valid. Click
-        <Link href={`/${translation}/${book}`}> here</Link> to go back.
+        章节 {chapter} 无效。点击
+        <Link href={`/${translation}/${book}`}> 此处</Link>返回。
       </div>
     );
   }
@@ -35,8 +35,8 @@ export default async function ChapterPage({
   if (!actualBook || actualBook.chapters < chapterNumber || chapterNumber < 1) {
     return (
       <div>
-        Chapter number of {chapter} is not valid. Click
-        <Link href={`/${translation}/${book}`}> here</Link> to go back.
+        章节号 {chapter} 无效。点击
+        <Link href={`/${translation}/${book}`}> 此处</Link>返回。
       </div>
     );
   }
