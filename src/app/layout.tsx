@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Noto_Sans } from 'next/font/google';
+import { Noto_Sans_SC } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider } from '@/lib/theme-provider';
 
-const baseFont = Noto_Sans({
-  subsets: ['latin'],
+const baseFont = Noto_Sans_SC({
+  subsets: ['latin', 'chinese-simplified'],
 });
 
 export const metadata: Metadata = {
