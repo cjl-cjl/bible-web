@@ -55,7 +55,7 @@ const LoginPage = () => {
         </button>
       </Form>
       <p className="text-sm text-center">
-        还没有账户？{' '}'}
+        还没有账户？{' '}
         <Link
           href={`/signup?redirect=${encodeURIComponent(pathname)}`}
           className="text-blue-600 hover:underline"
