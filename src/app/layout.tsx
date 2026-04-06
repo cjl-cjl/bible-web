@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider } from '@/lib/theme-provider';
 
 const baseFont = Noto_Sans_SC({
-  subsets: ['latin', 'chinese-simplified'],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
