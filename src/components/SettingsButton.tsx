@@ -29,11 +29,11 @@ export default function SettingsButton() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="flex flex-col w-48">
-        <DropdownMenuLabel className="font-bold">Settings</DropdownMenuLabel>
+        <DropdownMenuLabel className="font-bold">设置</DropdownMenuLabel>
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuGroup>
           <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-            Dark Theme
+            深色主题
             <DropdownMenuShortcut>
               <ThemeToggleSwitch></ThemeToggleSwitch>
             </DropdownMenuShortcut>
@@ -47,7 +47,7 @@ export default function SettingsButton() {
             passHref
           >
             <DropdownMenuItem className="hover:cursor-pointer">
-              Login
+              登录
             </DropdownMenuItem>
           </Link>
           <Link
@@ -55,7 +55,7 @@ export default function SettingsButton() {
             passHref
           >
             <DropdownMenuItem className="hover:cursor-pointer">
-              Sign Up
+              注册
             </DropdownMenuItem>
           </Link>
         </DropdownMenuGroup>

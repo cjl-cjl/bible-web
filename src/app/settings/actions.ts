@@ -23,12 +23,12 @@ export async function updateSettings(formData: FormData) {
 
   try {
     // Logic for updating user settings would go here
-    return { success: true, message: 'Settings saved successfully' };
+    return { success: true, message: '设置已成功保存' };
   } catch (error) {
     console.error('[v0] Error updating settings:', error);
     return {
       success: false,
-      message: 'Failed to save settings. Please try again.',
+      message: '保存设置失败，请重试。',
     };
   }
 }

@@ -38,10 +38,10 @@ export default function ParallelButton({ parallelButtonProps }: Props) {
           source_translation: parallelButtonProps.source_translation,
           parallel_translations: selected,
         });
-        toast.success('Preference saved');
+        toast.success('偏好已保存');
         setOpen(false); // close the dropdown
       } catch {
-        toast('Error', { description: 'Could not save your preferences.' });
+        toast('错误', { description: '无法保存您的偏好设置。' });
       }
     });
   };
@@ -59,9 +59,9 @@ export default function ParallelButton({ parallelButtonProps }: Props) {
 
       <DropdownMenuContent className="w-64 p-6 space-y-4">
         <div>
-          <p className="text-lg font-bold">Parallel Reading</p>
+          <p className="text-lg font-bold">平行阅读</p>
           <p className="mb-2 text-sm text-muted-foreground">
-            Select translations to read together.
+            选择要一起阅读的译本。
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function ParallelButton({ parallelButtonProps }: Props) {
           className="w-full hover:cursor-pointer"
           disabled={isPending}
         >
-          {isPending ? 'Saving...' : 'Save'}
+          {isPending ? '保存中...' : '保存'}
         </Button>
       </DropdownMenuContent>
     </DropdownMenu>

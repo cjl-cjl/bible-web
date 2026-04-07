@@ -1,3 +1,3 @@
 export default function AboutPage() {
-  return <div>About page</div>;
+  return <div>关于页面</div>;
 }

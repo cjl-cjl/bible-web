@@ -72,7 +72,7 @@ export default async function TranslationPage({
   }
   return (
     <div>
-      {translation} not available. Click <Link href="/">here</Link> to go back.
+      {translation} 不可用。点击<Link href="/">此处</Link>返回。
     </div>
   );
 }

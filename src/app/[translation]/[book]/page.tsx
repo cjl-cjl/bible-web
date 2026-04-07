@@ -26,8 +26,8 @@ export default async function BookPage({
   if (!actualBookFind) {
     return (
       <div>
-        The requested book {book} not found. Click{' '}
-        <Link href={`/${translation}`}>here</Link> to go back.
+        请求的书卷 {book} 未找到。点击{' '}
+        <Link href={`/${translation}`}>此处</Link>返回。
       </div>
     );
   }

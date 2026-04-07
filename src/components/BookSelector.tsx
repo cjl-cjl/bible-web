@@ -29,7 +29,7 @@ export default function BookSelector({
           <NavigationMenuContent>
             <ul className="grid w-[165px] gap-4 max-h-96 overflow-y-scroll">
               <li>
-                <h6 className="m-2 font-bold">Old Testament</h6>
+                <h6 className="m-2 font-bold">旧约</h6>
                 {BOOK_LIST.slice(0, 39).map((item, index) => (
                   <NavigationMenuLink key={index} asChild>
                     <Link
@@ -39,7 +39,7 @@ export default function BookSelector({
                     </Link>
                   </NavigationMenuLink>
                 ))}
-                <h6 className="m-2 font-bold">New Testament</h6>
+                <h6 className="m-2 font-bold">新约</h6>
                 {BOOK_LIST.slice(39, 67).map((item, index) => (
                   <NavigationMenuLink key={index} asChild>
                     <Link

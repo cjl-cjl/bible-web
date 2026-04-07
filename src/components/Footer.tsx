@@ -3,12 +3,12 @@ import { Separator } from './ui/separator';
 
 export default function Footer() {
   const menus: { [key: string]: string } = {
-    About: '/about',
-    Blog: '/blog',
-    Resources: '/resources',
-    FAQ: '/faq',
-    Tips: '/tips',
-    Source: 'https://gitlab.com/Scripture/bible-web',
+    '关于': '/about',
+    '博客': '/blog',
+    '资源': '/resources',
+    '常见问题': '/faq',
+    '提示': '/tips',
+    '源代码': 'https://gitlab.com/Scripture/bible-web',
   };
 
   return (

@@ -30,9 +30,9 @@ export function SettingsForm({ user }: { user: User }) {
     const result = await updateSettings(formData);
 
     if (result.success) {
-      toast.success('Success', { description: result.message });
+      toast.success('成功', { description: result.message });
     } else {
-      toast.warning('Error', { description: result.message });
+      toast.warning('错误', { description: result.message });
     }
 
     setIsLoading(false);
@@ -42,9 +42,9 @@ export function SettingsForm({ user }: { user: User }) {
     <div className="container  py-10 px-4 md:px-6">
       <div className="space-y-6">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
+          <h2 className="text-2xl font-bold tracking-tight">设置</h2>
           <p className="text-muted-foreground">
-            Manage your account details and security settings.
+            管理您的账户信息和安全设置。
           </p>
         </div>
         <Separator />
@@ -52,14 +52,14 @@ export function SettingsForm({ user }: { user: User }) {
         <form onSubmit={handleSubmit}>
           <Card>
             <CardHeader>
-              <CardTitle>User Profile</CardTitle>
+              <CardTitle>用户资料</CardTitle>
               <CardDescription>
-                Update your email, name, username, and password below.
+                在下方更新您的邮箱、姓名、用户名和密码。
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-2">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name">姓名</Label>
                 <Input
                   id="name"
                   name="name"
@@ -68,7 +68,7 @@ export function SettingsForm({ user }: { user: User }) {
                 />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="username">Username</Label>
+                <Label htmlFor="username">用户名</Label>
                 <Input
                   id="username"
                   name="username"
@@ -77,7 +77,7 @@ export function SettingsForm({ user }: { user: User }) {
                 />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">邮箱</Label>
                 <Input
                   id="email"
                   name="email"
@@ -87,7 +87,7 @@ export function SettingsForm({ user }: { user: User }) {
                 />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="oldpassword">Old Password</Label>
+                <Label htmlFor="oldpassword">旧密码</Label>
                 <Input
                   id="oldpassword"
                   name="oldpassword"
@@ -96,7 +96,7 @@ export function SettingsForm({ user }: { user: User }) {
                 />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="password">New Password</Label>
+                <Label htmlFor="password">新密码</Label>
                 <Input
                   id="password"
                   name="password"
@@ -105,7 +105,7 @@ export function SettingsForm({ user }: { user: User }) {
                 />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="confirmpassword">Confirm Password</Label>
+                <Label htmlFor="confirmpassword">确认密码</Label>
                 <Input
                   id="confirmpassword"
                   name="confirmpassword"
@@ -116,7 +116,7 @@ export function SettingsForm({ user }: { user: User }) {
             </CardContent>
             <CardFooter className="border-t px-6 py-4 flex justify-end">
               <Button type="submit" disabled={isLoading}>
-                {isLoading ? 'Saving...' : 'Save Changes'}
+                {isLoading ? '保存中...' : '保存更改'}
               </Button>
             </CardFooter>
           </Card>

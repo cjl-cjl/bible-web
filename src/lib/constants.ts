@@ -1,4 +1,4 @@
-export const APP_NAME = 'The Bible';
+export const APP_NAME = '圣经';
 
 export const OT_BOOK_COUNT = 39;
 export const NT_BOOK_COUNT = 27;

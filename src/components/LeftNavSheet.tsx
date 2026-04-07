@@ -112,7 +112,7 @@ export default function LeftNavSheet({
         <SheetHeader className="pb-4 border-b">
           <SheetTitle className="text-xl md:text-2xl font-bold">
             <div className="grid grid-cols-2">
-              <Link href="/">The Bible</Link>
+              <Link href="/">圣经</Link>
               {(headerMidNavProps || translation) && (
                 <TranslationMenu
                   translation={headerMidNavProps?.translation ?? translation!}
@@ -127,7 +127,7 @@ export default function LeftNavSheet({
                   className="text-muted-foreground hover:cursor-pointer"
                   htmlFor="use-abbreviations"
                 >
-                  Use abbreviations
+                  使用缩写
                 </Label>
                 <Switch
                   className="hover:cursor-pointer"
@@ -144,7 +144,7 @@ export default function LeftNavSheet({
             <div className="space-y-8">
               <section>
                 <h3 className="mb-2 px-4 font-bold text-muted-foreground text-base sm:text-lg md:text-lg">
-                  Old Testament
+                  旧约
                 </h3>
                 <div className="grid grid-cols-4 gap-4 mx-2 ml-4">
                   {oldTestament.map((book, i1) => (
@@ -159,7 +159,7 @@ export default function LeftNavSheet({
 
               <section>
                 <h3 className="mb-2 px-4 font-bold text-muted-foreground text-base sm:text-lg md:text-lg">
-                  New Testament
+                  新约
                 </h3>
                 <div className="grid grid-cols-4 gap-4 mx-2 ml-4">
                   {newTestament.map((book, i2) => (
@@ -180,7 +180,7 @@ export default function LeftNavSheet({
                 <h3 className="mb-2 px-4 font-bold text-muted-foreground text-base sm:text-lg md:text-lg">
                   {regionalBookList
                     ? regionalBookList[0].testament_name
-                    : 'Old Testament'}
+                    : '旧约'}
                 </h3>
                 <div className="grid grid-cols-1">
                   {oldTestament.map((book, i1) => renderBookItem(book, i1))}
@@ -191,7 +191,7 @@ export default function LeftNavSheet({
                 <h3 className="mb-2 px-4 font-bold text-muted-foreground text-base sm:text-lg md:text-lg">
                   {regionalBookList
                     ? regionalBookList[65].testament_name
-                    : 'New Testament'}
+                    : '新约'}
                 </h3>
                 <div className="grid grid-cols-1">
                   {newTestament.map((book, i2) =>

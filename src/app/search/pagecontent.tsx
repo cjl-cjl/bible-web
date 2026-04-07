@@ -135,7 +135,7 @@ export default function PageContent({
       dontIncludeTranslationName,
     );
     navigator.clipboard.writeText(copyText);
-    toast.success('Copied');
+    toast.success('已复制');
     handleClearArray();
   };
   const languages = [
@@ -189,7 +189,7 @@ export default function PageContent({
         <DrawerContent className="data-[vaul-drawer-direction=right]:w-68 xl:data-[vaul-drawer-direction=right]:w-96 data-[vaul-drawer-direction=bottom]:max-h-128">
           <DrawerHeader>
             <div className="flex justify-between">
-              <DrawerTitle>Copy Drawer</DrawerTitle>
+              <DrawerTitle>复制抽屉</DrawerTitle>
               <DrawerClose>
                 <X
                   className="hover:cursor-pointer"
@@ -198,7 +198,7 @@ export default function PageContent({
               </DrawerClose>
             </div>
             <DrawerDescription>
-              Add verses to this drawer to copy
+              将经文添加到此抽屉以复制
             </DrawerDescription>
           </DrawerHeader>
           <ul className="px-8 list-disc overflow-y-auto">
@@ -233,7 +233,7 @@ export default function PageContent({
                 onCheckedChange={setReferenceAfterVerse}
                 id="referenceAfterVerse"
               ></Switch>
-              <Label htmlFor="referenceAfterVerse">Reference after verse</Label>
+              <Label htmlFor="referenceAfterVerse">经文后附参考</Label>
             </div>
             <div className="flex items-center space-x-2">
               <Switch
@@ -243,7 +243,7 @@ export default function PageContent({
                 id="dontIncludeTranslationName"
               ></Switch>
               <Label htmlFor="dontIncludeTranslationName">
-                {"Don't include translation name"}
+                {'不包含译本名称'}
               </Label>
             </div>
 
@@ -254,11 +254,11 @@ export default function PageContent({
                 onCheckedChange={setIncludeSearchLink}
                 id="includeSearchLink"
               ></Switch>
-              <Label htmlFor="includeSearchLink">Include search link</Label>
+              <Label htmlFor="includeSearchLink">包含搜索链接</Label>
             </div>
           </div>
           <Button className="hover:cursor-pointer mx-4" onClick={copyVerses}>
-            Copy
+            复制
           </Button>
           <DrawerFooter></DrawerFooter>
         </DrawerContent>
@@ -294,38 +294,38 @@ export default function PageContent({
         )}
       >
         <h2 className="text-xl mb-4">
-          <span className="font-bold">Search Results</span>
+          <span className="font-bold">搜索结果</span>
           <span className="text-muted-foreground">
             {' '}
-            ({verses.length} {verses.length === 1 ? 'verse' : 'verses'})
+            ({verses.length} 节经文)
           </span>
         </h2>
         <Separator />
         <div className="my-4 text-lg space-y-2">
           <div>
-            <span className="font-semibold">Query:</span> {query}
+            <span className="font-semibold">搜索词:</span> {query}
           </div>
 
           <div>
-            <span className="font-semibold">Translation:</span> {translation}
+            <span className="font-semibold">译本:</span> {translation}
           </div>
 
           {parallelTranslations?.length > 0 && (
             <div>
-              <span className="font-semibold">Parallel Translations:</span>{' '}
+              <span className="font-semibold">平行译本:</span>{' '}
               {parallelTranslations.join(', ')}
             </div>
           )}
 
           {books && books.length > 0 && books.length < 66 && (
             <div>
-              <span className="font-semibold">Books:</span> {books.join(', ')}
+              <span className="font-semibold">书卷:</span> {books.join(', ')}
             </div>
           )}
         </div>
         <Separator />
         <div className={cn(fontClassNames, 'my-8')}>
-          <h2 className="text-xl font-bold my-4">Matching Verses</h2>
+          <h2 className="text-xl font-bold my-4">匹配的经文</h2>
           <ul className="list-disc pl-5">
             {verses.map((verse, index) => {
               const parts = verse.verse.split(new RegExp(`(${query})`, 'gi'));

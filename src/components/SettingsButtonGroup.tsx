@@ -29,12 +29,12 @@ export default function SettingsButtonGroup({
   fontFamily: number;
 }) {
   const getFontSizeLabel = () => {
-    if (fontSize === 0) return 'Default';
+    if (fontSize === 0) return '默认';
     return fontSize > 0 ? `+${fontSize}` : `${fontSize}`;
   };
 
   const getMarginLabel = () => {
-    if (marginSize === 0) return 'Default';
+    if (marginSize === 0) return '默认';
     return marginSize > 0 ? `+${marginSize}` : `${marginSize}`;
   };
 
@@ -43,7 +43,7 @@ export default function SettingsButtonGroup({
       <DropdownMenuTrigger asChild>
         <ButtonGroup>
           <Button className="hover:cursor-pointer" variant="outline">
-            Font Settings
+            字体设置
           </Button>
           <Button
             className="!pl-2 bg-transparent hover:cursor-pointer"
@@ -56,7 +56,7 @@ export default function SettingsButtonGroup({
       <DropdownMenuContent align="end" className="[--radius:1rem] min-w-56">
         <DropdownMenuGroup>
           <DropdownMenuLabel className="text-xs text-muted-foreground font-normal">
-            Font Size: {getFontSizeLabel()}
+            字体大小: {getFontSizeLabel()}
           </DropdownMenuLabel>
           <div className="flex items-center gap-2 px-2 py-1.5">
             <Button
@@ -87,7 +87,7 @@ export default function SettingsButtonGroup({
 
         <DropdownMenuGroup className="hidden sm:block">
           <DropdownMenuLabel className="text-xs text-muted-foreground font-normal">
-            Margin: {getMarginLabel()}
+            边距: {getMarginLabel()}
           </DropdownMenuLabel>
           <div className="flex items-center gap-2 px-2 py-1.5">
             <Button
@@ -118,7 +118,7 @@ export default function SettingsButtonGroup({
 
         <DropdownMenuGroup>
           <DropdownMenuLabel className="text-xs text-muted-foreground font-normal">
-            Font Family
+            字体系列
           </DropdownMenuLabel>
           <DropdownMenuItem
             className="hover:cursor-pointer"
@@ -130,7 +130,7 @@ export default function SettingsButtonGroup({
             >
               Aa
             </div>
-            Sans
+            无衬线
             {fontFamily === 0 && <CheckIcon className="ml-auto" />}
           </DropdownMenuItem>
           <DropdownMenuItem
@@ -143,7 +143,7 @@ export default function SettingsButtonGroup({
             >
               Aa
             </div>
-            Serif
+            衬线
             {fontFamily === 1 && <CheckIcon className="ml-auto" />}
           </DropdownMenuItem>
         </DropdownMenuGroup>

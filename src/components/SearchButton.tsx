@@ -85,11 +85,11 @@ export default function SearchButton({
         <DropdownMenuContent className="w-[400px] p-4 space-y-4" align="start">
           <div className="space-y-2">
             <DropdownMenuLabel className="px-0 font-bold text-xl">
-              Search
+              搜索
             </DropdownMenuLabel>
             <div className="relative">
               <Input
-                placeholder="Search query..."
+                placeholder="输入搜索内容..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="pr-10"
@@ -102,7 +102,7 @@ export default function SearchButton({
             <div className="space-y-2">
               <DropdownMenuLabel className="px-0 flex items-center gap-2">
                 <Globe className="w-3.5 h-3.5" />
-                Translation
+                译本
               </DropdownMenuLabel>
               <select
                 value={translation}
@@ -130,7 +130,7 @@ export default function SearchButton({
                   htmlFor="match-case"
                   className="text-sm font-medium leading-none cursor-pointer"
                 >
-                  Match Case
+                  区分大小写
                 </label>
               </div>
               <div className="flex items-center space-x-2">
@@ -146,7 +146,7 @@ export default function SearchButton({
                   htmlFor="whole-words"
                   className="text-sm font-medium leading-none cursor-pointer"
                 >
-                  Whole Words
+                  全词匹配
                 </label>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function SearchButton({
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <DropdownMenuLabel className="px-0">
-                Scope & Books
+                范围和书卷
               </DropdownMenuLabel>
               <div className="flex gap-2">
                 <Button
@@ -166,7 +166,7 @@ export default function SearchButton({
                   className="h-7 text-xs hover:cursor-pointer"
                   onClick={() => selectTestament('old')}
                 >
-                  Old Testament
+                  旧约
                 </Button>
                 <Button
                   variant="ghost"
@@ -174,7 +174,7 @@ export default function SearchButton({
                   className="h-7 text-xs hover:cursor-pointer"
                   onClick={() => selectTestament('new')}
                 >
-                  New Testament
+                  新约
                 </Button>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function SearchButton({
                 ))}
                 {selectedBooks.length > 5 && (
                   <Badge variant="secondary" className="text-[10px] h-5">
-                    +{selectedBooks.length - 5} more
+                    +{selectedBooks.length - 5} 更多
                   </Badge>
                 )}
                 <Button
@@ -222,7 +222,7 @@ export default function SearchButton({
                   className="h-5 p-0 text-[10px] ml-auto text-destructive hover:cursor-pointer"
                   onClick={() => setSelectedBooks([])}
                 >
-                  Clear All
+                  清除全部
                 </Button>
               </div>
             )}
@@ -233,7 +233,7 @@ export default function SearchButton({
             onClick={handleSearch}
             disabled={query.length < 3}
           >
-            Search
+            搜索
           </Button>
         </DropdownMenuContent>
       </DropdownMenu>

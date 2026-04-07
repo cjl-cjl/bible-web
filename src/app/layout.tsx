@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
-import { Noto_Sans } from 'next/font/google';
+import { Noto_Sans_SC } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider } from '@/lib/theme-provider';
 
-const baseFont = Noto_Sans({
+const baseFont = Noto_Sans_SC({
   subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: 'Scripture - Read the Bible Online',
-  description: 'A simple way to read and explore the Word of God',
+  title: '圣经 - 在线阅读圣经',
+  description: '一种简单的方式来阅读和探索上帝的话语',
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning>
       <body className={`${baseFont.className} antialiased`}>
         <ThemeProvider
           attribute="class"

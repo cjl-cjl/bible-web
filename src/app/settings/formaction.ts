@@ -33,5 +33,5 @@ export async function settingsAction(
   };
   await makeUsersRequestFormBody('/userpreferences', 'PUT', body);
   revalidatePath('/settings');
-  return { message: 'Updated successfully' };
+  return { message: '更新成功' };
 }

@@ -52,7 +52,7 @@ async function ActualNav({
             className="text-muted-foreground  hover:cursor-pointer"
             htmlFor="use-abbreviations"
           >
-            Use abbreviations
+            使用缩写
           </Label>
           <Switch
             className="hover:cursor-pointer"
